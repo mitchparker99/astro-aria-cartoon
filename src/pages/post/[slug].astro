@@ -1,16 +1,51 @@
 ---
 import { getCollection } from "astro:content";
+import type { PostEntry } from "../../types";
+import Layout from "../../layouts/main.astro";
 
 export async function getStaticPaths() {
-  const postEntries = await getCollection("post");
+  const postEntries = (await getCollection("post")) as unknown as PostEntry[];
   return postEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
   }));
 }
 
-const { entry } = Astro.props;
+const { entry } = Astro.props as { entry: PostEntry };
 const { Content } = await entry.render();
 ---
 
-<Content />
+<Layout title={entry.data.title} description={entry.data.description}>
+  <main
+    class="relative z-30 max-w-4xl pb-1 mx-auto mt-10 bg-white dark:bg-neutral-950 md:rounded-t-md text-neutral-900"
+  >
+    <div
+      class="relative flex flex-col px-5 pt-6 border-t border-b-0 md:border-r md:border-l md:pt-20 lg:px-0 justify-stretch md:rounded-t-2xl border-neutral-200 dark:border-neutral-800"
+    >
+      <div
+        class="absolute top-0 left-0 hidden w-px h-full mt-1 -translate-x-px md:block bg-gradient-to-b from-transparent to-white dark:to-neutral-950"
+      >
+      </div>
+      <div
+        class="absolute top-0 right-0 hidden w-px h-full mt-1 translate-x-px md:block bg-gradient-to-b from-transparent to-white dark:to-neutral-950"
+      >
+      </div>
+      <h1
+        class="w-full max-w-2xl mx-auto text-3xl font-bold leading-tight tracking-tighter text-left md:mb-4 md:text-4xl dark:text-neutral-100 lg:text-5xl md:leading-none"
+      >
+        {entry.data.title}
+      </h1>
+      <p
+        class="w-full max-w-2xl mx-auto mt-3 text-xs tracking-widest uppercase md:mb-12 text-neutral-400 dark:text-neutral-500"
+      >
+        {entry.data.dateFormatted}
+      </p>
+    </div>
+
+    <article
+      class="w-full max-w-2xl mx-auto mb-20 prose-sm prose px-7 lg:px-0 lg:prose-lg dark:prose-invert"
+    >
+      <Content />
+    </article>
+  </main>
+</Layout>

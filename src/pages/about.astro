@@ -3,71 +3,148 @@ import experiences from "../collections/experiences.json";
 import AboutExperience from "../components/about-experience.astro";
 import PageHeading from "../components/page-heading.astro";
 import Layout from "../layouts/main.astro";
+
+const education = [
+  {
+    qualification: "M. Information Technology — Data Science & Software Development",
+    institution: "Charles Sturt University · 2023 – 2025",
+    detail: "GPA 6.17 · Executive Dean's Award. Big Data Analytics, Data & Knowledge Engineering, Database Systems, ICT Project Management, Information Security, Applied IT Ethics, Emerging Technologies.",
+  },
+  {
+    qualification: "Grad. Cert. Applied Data Science",
+    institution: "Charles Sturt University · 2023 – 2024",
+    detail: "GPA 6.00.",
+  },
+  {
+    qualification: "B. Audio Engineering",
+    institution: "SAE Institute Australia · 2020 – 2022",
+    detail: "",
+  },
+];
+
+const certifications = [
+  "AWS Certified Solutions Architect — '24",
+  "Google Data Analytics Professional — '24",
+  "Microsoft Data Analyst Associate (Power BI) — '23",
+  "Career Essentials in Cybersecurity, Microsoft & LinkedIn — '23",
+  "Programming with Python, OpenEDG — '22",
+];
 ---
 
-<Layout title="About Me">
+<Layout
+  title="About"
+  description="Mitchell Parker owns technology strategy, AI adoption and data architecture end-to-end — Co-Founder & COO at DiceWill, Data Architect at Mine Market, founder of SAH Studios."
+>
   <section class="relative z-20 max-w-3xl mx-auto my-12 px-7 lg:px-0">
     <PageHeading
-      title="Specializing in all things data."
-      description="Data-driven problem solver with a strong academic foundation in data science. Eager to leverage my skills in a dynamic environment to extract actionable insights and contribute to innovative solutions."
+      title="Strategy, AI adoption and data architecture."
+      description="I'm a technology leader and startup co-founder who owns strategy, AI adoption and data architecture end-to-end — then stays close enough to the build to set the standard. Based between Japan and Australia, working remotely with teams anywhere."
     />
 
     <img
-      src="/assets/images/about.png"
+      src="/assets/images/about.jpg"
+      alt="Abstract render of a connected network"
+      loading="lazy"
+      decoding="async"
       class="relative z-30 w-full my-10 rounded-xl"
     />
 
+    <p
+      class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
+    >
+      I'm Co-Founder and COO of <strong class="font-semibold dark:text-neutral-200"
+        >DiceWill</strong
+      >, an AI health platform targeting a $12B MENA market, where I own AI and
+      data strategy, governance and compliance. Alongside it I'm Data Architect
+      at <strong class="font-semibold dark:text-neutral-200">Mine Market</strong
+      > and founder of <strong class="font-semibold dark:text-neutral-200"
+        >SAH Studios</strong
+      >, an AI-automation agency that has served more than 100 clients. Seven
+      platforms shipped end-to-end, and regulated-sector depth across four
+      Australian healthcare networks and the ADF.
+    </p>
+
     <h2
-      class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
+      class="mt-8 mb-4 text-2xl font-bold lg:mt-12 sm:mt-10 dark:text-neutral-200"
     >
       Experience
     </h2>
     <div>
       {
-        experiences.map((experience, loop) => {
-          return (
-            <>
-              {loop == 0 || loop == 1 ? (
-                <div>
-                  <AboutExperience
-                    dates={experience.dates}
-                    role={experience.role}
-                    company={experience.company}
-                    description={experience.description}
-                    logo={experience.logo}
-                  />
-                </div>
-              ) : (
-                <AboutExperience
-                  dates={experience.dates}
-                  role={experience.role}
-                  company={experience.company}
-                  description={experience.description}
-                  logo={experience.logo}
-                />
-              )}
-            </>
-          );
-        })
+        experiences.map((experience) => (
+          <AboutExperience
+            dates={experience.dates}
+            role={experience.role}
+            company={experience.company}
+            description={experience.description}
+          />
+        ))
       }
     </div>
 
     <h2
-      class="mt-5 mb-2 text-2xl font-bold lg:mt-10 sm:mt-6 dark:text-neutral-200"
+      class="mt-8 mb-4 text-2xl font-bold lg:mt-12 sm:mt-10 dark:text-neutral-200"
+    >
+      Education
+    </h2>
+    <div>
+      {
+        education.map((item) => (
+          <div class="mb-6 last:mb-0">
+            <h3 class="my-1 text-lg font-bold dark:text-neutral-100">
+              {item.qualification}
+            </h3>
+            <p class="mb-1 text-sm font-medium dark:text-neutral-300">
+              {item.institution}
+            </p>
+            {item.detail && (
+              <p class="text-sm font-light leading-6 text-neutral-600 dark:text-neutral-400">
+                {item.detail}
+              </p>
+            )}
+          </div>
+        ))
+      }
+    </div>
+
+    <h2
+      class="mt-8 mb-4 text-2xl font-bold lg:mt-12 sm:mt-10 dark:text-neutral-200"
+    >
+      Certifications
+    </h2>
+    <ul
+      class="space-y-1 text-sm list-disc list-inside text-neutral-600 dark:text-neutral-400 sm:text-base"
+    >
+      {certifications.map((certification) => <li>{certification}</li>)}
+    </ul>
+
+    <h2
+      class="mt-8 mb-4 text-2xl font-bold lg:mt-12 sm:mt-10 dark:text-neutral-200"
     >
       Let's Connect
     </h2>
     <p
       class="text-sm leading-6 text-gray-600 dark:text-neutral-400 sm:leading-7 lg:leading-8 sm:text-base lg:text-lg"
     >
-      If you want to stay up to date with my work be sure to follow me on <a
-        href="https://twitter.com/mitchparker99"
-        target="_blank"
-        class="text-indigo-600 underline">twitter</a
-      >, or you can send me an <a
+      The quickest way to reach me is <a
         href="mailto:mitchelljamesparker99@gmail.com"
         class="text-indigo-600 underline">email</a
-      > and I'll be sure to get back to you.
+      >. I'm also on <a
+        href="https://www.linkedin.com/in/mitchparker99/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-indigo-600 underline">LinkedIn</a
+      >, <a
+        href="https://github.com/mitchparker99"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-indigo-600 underline">GitHub</a
+      > and <a
+        href="https://x.com/mitchparker99"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-indigo-600 underline">X</a
+      >.
     </p>
   </section>
 </Layout>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Location data companion">
+  <rect x="4" y="4" width="1592" height="892" rx="34" fill="none" stroke="#a3a3a3" stroke-width="4" stroke-dasharray="14 14" opacity="0.7"/>
+  <g font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="92" y="150" fill="#8a8a8a" font-size="42" font-weight="600" letter-spacing="10">2025</text>
+    <g transform="translate(1248, 108)">
+      <rect x="0" y="0" width="260" height="62" rx="31" fill="none" stroke="#a3a3a3" stroke-width="3" stroke-dasharray="10 8"/>
+      <text x="130" y="41" fill="#8a8a8a" font-size="30" font-weight="600" letter-spacing="2" text-anchor="middle">PRE-LAUNCH</text>
+    </g>
+    <text x="92" y="490" fill="#8a8a8a" font-size="76" font-weight="700" letter-spacing="-1">Location data companion</text>
+    <line x1="92" y1="560" x2="420" y2="560" stroke="#a3a3a3" stroke-width="4" stroke-dasharray="12 12"/>
+    <text x="92" y="650" fill="#8a8a8a" font-size="34" font-weight="500" opacity="0.9">Next.js · Supabase · Google Maps API</text>
+  </g>
+  <g><path d="M 990 640 C 1080 470, 1160 640, 1250 470 S 1400 330, 1450 300" fill="none" stroke="#8a8a8a" stroke-width="5" stroke-dasharray="16 14" opacity="0.75" stroke-linecap="round"/><circle cx="990" cy="640" r="18" fill="none" stroke="#8a8a8a" stroke-width="6"/><circle cx="990" cy="640" r="6" fill="#8a8a8a"/><circle cx="1250" cy="470" r="18" fill="none" stroke="#8a8a8a" stroke-width="6"/><circle cx="1250" cy="470" r="6" fill="#8a8a8a"/><circle cx="1450" cy="300" r="26" fill="none" stroke="#8a8a8a" stroke-width="6"/><circle cx="1450" cy="300" r="9" fill="#8a8a8a"/></g>
+</svg>

@@ -1,18 +1,46 @@
 ---
+import { getCollection } from "astro:content";
 import PageHeading from "../components/page-heading.astro";
 import PostsLoop from "../components/posts-loop.astro";
 import Layout from "../layouts/main.astro";
+
+const posts = await getCollection("post");
 ---
 
-<Layout title="My Writing">
+<Layout
+  title="Writing"
+  description="Notes from Mitchell Parker on AI adoption, data architecture and shipping software end-to-end."
+>
   <section class="relative z-20 max-w-2xl mx-auto my-12 px-7 lg:px-0">
     <PageHeading
-      title="My Writing"
-      description="Dive into my musings on life and tech in my latest posts; a blend of introspection and innovation. Keep an eye out for fresh insights and updates!"
+      title="Writing"
+      description="Notes on AI adoption, data architecture and what it actually takes to ship and operate software end-to-end."
     />
 
     <div class="z-50 flex flex-col items-stretch w-full gap-5 my-8">
-      <PostsLoop count="999999999" />
+      {
+        posts.length > 0 ? (
+          <PostsLoop count="999999999" />
+        ) : (
+          <div class="relative p-10 border border-dashed rounded-2xl border-neutral-300 dark:border-neutral-600">
+            <p class="text-sm font-semibold text-neutral-800 dark:text-neutral-200">
+              Nothing published yet.
+            </p>
+            <p class="mt-2 text-sm leading-6 text-neutral-600 dark:text-neutral-400">
+              The first pieces are still being written. In the meantime, the
+              work itself is on the{" "}
+              <a href="/projects" class="text-indigo-600 underline">
+                projects page
+              </a>
+              , and the background is on{" "}
+              <a href="/about" class="text-indigo-600 underline">
+                about
+              </a>
+              .
+            </p>
+          </div>
+        )
+      }
     </div>
   </section>
 </Layout>

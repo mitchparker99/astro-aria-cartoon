@@ -1,7 +1,11 @@
 {
-	"name": "astro-aria",
+	"name": "mitchell-parker-portfolio",
+	"description": "Portfolio and writing site for Mitchell Parker — technology executive working across AI adoption and data architecture.",
+	"author": "Mitchell Parker <mitchelljamesparker99@gmail.com>",
+	"license": "MIT",
+	"private": true,
 	"type": "module",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
@@ -12,6 +16,7 @@
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.6.0",
+		"@astrojs/sitemap": "^3.1.6",
 		"@astrojs/tailwind": "^5.1.0",
 		"@biomejs/biome": "1.7.3",
 		"@tailwindcss/typography": "^0.5.13",

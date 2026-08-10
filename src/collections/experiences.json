@@ -1,23 +1,35 @@
 [
 	{
-		"dates": "",
-		"role": "Front-end Engineer",
-		"company": "Full Truck Alliance",
-		"description": "Responsible for customer service and CRM system front-end development.",
-		"logo": "/assets/images/experiences/fta.ico"
+		"dates": "2025 · Present",
+		"role": "Co-Founder & COO — AI & Data Strategy",
+		"company": "DiceWill · UAE / India",
+		"summary": "AI health platform built for a $12B MENA market. I own AI and data strategy, the compliance framework and day-to-day operations.",
+		"description": "AI health platform — WhatsApp-first triage, records and medication management — serving a $12B MENA market of 600M+ patients. I own AI and data strategy: data-collection architecture, anonymisation and retention policy, consent design, and the feedback loop that improves triage accuracy from live sessions. Built the compliance framework from scratch (DPDPA, DHA Dubai, GDPR principles) and lead operations, tooling and partnerships — 8 providers signed and 120 waitlisted at MVP, with a $500K seed running."
 	},
 	{
-		"dates": "July 2015 · June 2018",
-		"role": "Front-end Engineer",
-		"company": "YOHO!",
-		"description": "Responsible for mobile front-end development of e-commerce platform.",
-		"logo": "/assets/images/experiences/yoho.ico"
+		"dates": "2024 · Present",
+		"role": "Data Architect",
+		"company": "Mine Market · Australia",
+		"summary": "Own the data architecture end-to-end: ingestion, warehouse modelling and the BI layer leadership makes decisions from.",
+		"description": "Own the data architecture end-to-end — ingestion, warehouse modelling, and the BI layer leadership makes product and commercial decisions from — with data-quality and governance controls designed in from day one. PostgreSQL, Python, AWS and Power BI."
 	},
 	{
-		"dates": "September 2014 · July 2015 ",
-		"role": "Node.JS Developer",
-		"company": "WuLian",
-		"description": "Intern, involved in the development of Internet of Things cloud systems.",
-		"logo": "/assets/images/experiences/wulian.ico"
+		"dates": "2022 · Present",
+		"role": "Founder",
+		"company": "SAH Studios · Japan / Australia",
+		"summary": "AI-automation agency scaled to 100+ clients across e-commerce, hospitality and professional services. I own delivery, pricing and P&L.",
+		"description": "Founded and scaled an AI-automation agency to 100+ clients across e-commerce, hospitality and professional services, owning delivery, pricing, hiring and P&L. Productised outreach automation into reusable per-client modules and built the Stripe billing and sales-enablement stack."
+	},
+	{
+		"dates": "Mar 2025 · 2025",
+		"role": "Systems & Fleet Lead — Help Desk Analyst",
+		"company": "Royal Melbourne Hospital · Melbourne, VIC",
+		"description": "Led implementation of a new fleet-management platform across the hospital network — vendor coordination, configuration, data migration and real-time asset tracking. Ran system-improvement projects with senior management and delivered frontline IT support in a 24/7 clinical environment."
+	},
+	{
+		"dates": "May · Sep 2024",
+		"role": "Data Analyst",
+		"company": "Precision Analytics · Melbourne, VIC",
+		"description": "Delivered client data-analysis engagements in Python, SQL and Excel and built Tableau dashboards for reporting and BI. Established the data-quality and governance frameworks that set consistent analysis standards across engagements."
 	}
 ]

@@ -2,6 +2,9 @@
 import projects from "../../collections/projects.json";
 import Button from "../button.astro";
 import Project from "../project.astro";
+
+// Newest three of the seven builds; the full record lives on /projects.
+const recent = projects.slice(-3).reverse();
 ---
 
 <section class="max-w-4xl mx-auto px-7 lg:px-0">
@@ -11,14 +14,14 @@ import Project from "../project.astro";
     My Projects
   </h2>
   <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400">
-    Here are some of my recent projects. I'm always working on something new, so
-    check back often!
+    My three most recent builds. Seven platforms designed, built and operated so
+    far — each one chosen to add a capability.
   </p>
   <div
     class="grid items-stretch w-full sm:grid-cols-2 md:grid-cols-3 gap-7 mt-7"
   >
     {
-      projects.map((project) => {
+      recent.map((project) => {
         return (
           <Project
             name={project.name}
@@ -32,6 +35,6 @@ import Project from "../project.astro";
   </div>
 
   <div class="flex items-center justify-center w-full py-5">
-    <Button text="View All My Projects" link="/projects" />
+    <Button text="See all seven builds" link="/projects" />
   </div>
 </section>

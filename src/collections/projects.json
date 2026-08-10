@@ -1,20 +1,38 @@
 [
 	{
-		"name": "Email.ML",
-		"description": "Minimalist temporary Email.",
-		"image": "/assets/images/projects/email.ml.png",
-		"url": "https://email.ml"
+		"name": "Repeat Dance Records",
+		"description": "Full-stack vinyl storefront on the Discogs API — 13-currency checkout, artist and category taxonomy, media embeds and a recommendation engine. Set the architecture pattern reused across every later commerce build.",
+		"image": "/assets/images/projects/repeat-dance-records.svg",
+		"url": "https://repeat-dance-store.vercel.app"
 	},
 	{
-		"name": "DNS.Surf",
-		"description": "Querying DNS Resolution Results in Different Regions Worldwide.",
-		"image": "/assets/images/projects/dns.surf.png",
-		"url": "https://dns.surf"
+		"name": "Chrome Furniture",
+		"description": "Premium storefront with supplier API integration and an automated image-processing pipeline, plus an order-management backend and the Power BI revenue and expense model that became the reporting layer.",
+		"image": "/assets/images/projects/chrome-furniture.svg"
 	},
 	{
-		"name": "HTML.ZONE",
-		"description": "Web Toolbox.",
-		"image": "/assets/images/projects/html.zone.png",
-		"url": "https://html.zone"
+		"name": "Meridian",
+		"description": "Open-source execution engine bridging Crypto.com and Alpaca — configurable strategy parameters, automated order logic and risk limits across crypto and equities. Published for public review.",
+		"image": "/assets/images/projects/meridian.svg"
+	},
+	{
+		"name": "Orbis",
+		"description": "Browser-based editor for spherical and 360° footage aimed at creators, real-estate and travel media. GPU rendering pipeline in WebGL and Three.js over a Python processing backend.",
+		"image": "/assets/images/projects/orbis.svg"
+	},
+	{
+		"name": "Tabiji",
+		"description": "Location-aware trip planner that ingests Google Maps saved-place exports into a normalised itinerary model covering routes, filming locations, food logs and inventory.",
+		"image": "/assets/images/projects/tabiji.svg"
+	},
+	{
+		"name": "Horizon IT",
+		"description": "Integration layer unifying Lightspeed POS, Deputy workforce management and NowBookIt bookings for a multi-site hospitality client — API contracts, sync orchestration and one reporting schema across three vendors.",
+		"image": "/assets/images/projects/horizon-it.svg"
+	},
+	{
+		"name": "Parker AI",
+		"description": "Conversational Japanese tutor chaining real-time speech recognition (Deepgram Nova-3) into LLM response generation (Claude), with pronunciation scoring, a JLPT-aligned curriculum and spaced repetition.",
+		"image": "/assets/images/projects/parker-ai.svg"
 	}
 ]
