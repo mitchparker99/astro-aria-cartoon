@@ -1,2 +1,12 @@
-<div class="w-full h-auto bg-white dark:bg-neutral-950 aspect-square {classes}">
+---
+// `classes` is optional extra styling for a single cell of the decorative grid.
+const { classes = "" } = Astro.props;
+---
+
+<div
+  class:list={[
+    "w-full h-auto bg-white dark:bg-neutral-950 aspect-square",
+    classes,
+  ]}
+>
 </div>

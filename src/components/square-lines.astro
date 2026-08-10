@@ -2,7 +2,14 @@
 import SquareLine from "./square-line.astro";
 ---
 
-<div class="absolute w-full h-auto" style="z-index:-1">
+<!--
+  `overflow-x-clip` keeps the decorative grid from pushing the page wider than the
+  viewport: each cell has a min-width floor from its aspect-ratio, so the nine
+  cells in a row can total more than the half-width column that holds them. Clip
+  (not hidden) so the box never becomes a scroll container and the vertical
+  overflow the layout relies on still paints.
+-->
+<div class="absolute w-full h-auto overflow-x-clip" style="z-index:-1">
   <div
     class="absolute top-0 left-0 w-1/2 h-auto bg-neutral-100 dark:bg-neutral-800"
   >

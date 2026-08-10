@@ -22,6 +22,20 @@ const education = [
   },
 ];
 
+// Roles before the entries in experiences.json — listed compactly because the
+// detail that matters is the sector, not the day-to-day.
+const earlier = [
+  { role: "Helpdesk Analyst", org: "Ramsay Healthcare", years: "2023" },
+  { role: "Helpdesk Analyst", org: "St John Ambulance WA", years: "2021 – 2023" },
+  {
+    role: "Driver Specialist",
+    org: "Australian Defence Force (Army)",
+    years: "2018 – 2023",
+  },
+  { role: "Hotel Manager", org: "QT Hotels, Melbourne", years: "2023 – 2024" },
+  { role: "Hostel & Retail Manager", org: "NZ Ski, Queenstown NZ", years: "2022" },
+];
+
 const certifications = [
   "AWS Certified Solutions Architect — '24",
   "Google Data Analytics Professional — '24",
@@ -81,6 +95,26 @@ const certifications = [
         ))
       }
     </div>
+
+    <h3 class="mt-8 mb-3 text-lg font-bold dark:text-neutral-100">
+      Earlier experience
+    </h3>
+    <ul
+      class="border-t border-b border-dashed divide-y divide-dashed border-neutral-300 dark:border-neutral-700 divide-neutral-300 dark:divide-neutral-700"
+    >
+      {
+        earlier.map((item) => (
+          <li class="flex flex-col py-3 sm:flex-row sm:items-baseline sm:justify-between">
+            <span class="text-sm font-medium dark:text-neutral-300">
+              {item.role} — {item.org}
+            </span>
+            <span class="mt-1 text-xs tracking-widest uppercase sm:mt-0 sm:ml-4 text-neutral-400 dark:text-neutral-500">
+              {item.years}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
 
     <h2
       class="mt-8 mb-4 text-2xl font-bold lg:mt-12 sm:mt-10 dark:text-neutral-200"
